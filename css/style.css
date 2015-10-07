@@ -1,0 +1,102 @@
+* {margin: 0; padding: 0; }
+html {overflow-y: scroll;} 
+ul { list-style: none inside; }
+li { list-style: none inside; }
+a:focus { outline: none; }
+.clear { clear: both; }   
+a { text-decoration: none; color: black;}
+input, textarea { outline: none; }
+fieldset { border: none; }
+
+#program {
+  overflow: auto;
+}
+
+#header {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-family: Tahoma;
+  margin-left: 920px;
+  margin-bottom: 20px;
+}
+
+#header p:first-of-type {
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+#header p {
+  font-size: 12px;
+}
+
+#world { 
+  border: 0px solid black;
+  float: left;
+  z-index: 1;
+  position: relative;
+}
+
+#options {
+  overflow: auto;
+  border: 0px solid black;
+  position: absolute;
+  width: 380px;
+  z-index: 100;
+  left: 920px;
+}
+
+#command {
+  float: left;
+  vertical-align: top;
+  width: 350px;
+  height: 35px;
+  font-size: 13px;
+  padding: 2px 5px; 
+  color: #729c72;
+}
+
+#send {
+  margin-top: 7px;
+  width: 364px;
+  padding: 8px 4px;
+}
+
+#examples {
+  margin-top: 15px;
+  margin-right: 19px;
+  font-size: 13px;
+  color: #bfbfbf;
+  font-family: Arial;
+  text-align: right;
+}
+
+#examples li {
+  margin-bottom: 8px;
+}
+
+#examples li:first-child {
+  color: #616161;
+  font-weight: bold;
+}
+
+#about {
+  margin-top: 50px;
+  margin-left: 30px;
+  width: 850px;
+  padding-bottom: 100px;
+  font-family: Tahoma;
+  font-size: 13px;
+  color: #303030;
+}
+
+#about a,
+#header a {
+  color: #2d84cc;
+}
+
+#about a:hover,
+#header a:hover {
+  text-decoration: underline;
+}
+
+

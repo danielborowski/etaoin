@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">   
+  </head>
+  <body>
+    <div id="header">
+      <h2>Etaoin</h2>
+      <p>Simple natural language undersanding program written in JavaScript</p>
+      <p>View source on <a href="https://github.com/danielborowski/etaoin" target="_blank">GitHub</a></p>
+    </div>
+
+    <div id="program">
+      <canvas width="1000" height="570" id="world"></canvas>
+      <div id="options">
+        <input type="text" id="command" placeholder="your command here..." />
+        <button id="send">Send Command</button> 
+        <ul id="examples">
+          <li>Examples</li>
+          <li>place 3 red cubes in the back</li>
+          <li>remove two tall cubes</li>
+          <li>place twelve objects anywhere</li>
+          <li>make all the red cubes larger</li>
+          <li>turn every cube into a purple pyramid</li>
+          <li>add 4 orange objects near the middle</li>
+          <li>move the yellow cube on top of the tall cube</li>
+          <li>add a yellow pyramid behind each red cube</li>
+          <li>move 3 black cubes to the right side</li>
+          <li>update the cubes color to purple and make it taller</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="about">
+      <h2>About</h2>
+      <p>This project (and name) was inspired by Terry Winograd's <a href="http://hci.stanford.edu/winograd/shrdlu/" target="_blank">SHRDLU project</a>. I tried to make something similar in a few days in JavaScript. My version is lacking several features that the SHRDLU project had such as question answering (e.g. you could ask the program questions like "can the pyramid support a pyramid"), physics, some type of pronoun resolution (e.g. asking the program "what color is it"), and more.</p> <br>
+      <p>I still wanted to test myself and see what I could accomplish in about a week, so here's my result. It's not perfect so some weird stuff might happen depending on what command you enter.</p> <br>
+      <h2>How To Use</h2>
+      <p>1. You can add, change or remove objects from the world by writing a <i>single command</i> in plain English.</p> 
+      <p>2. The world can take two types of objects: cubes and pyramids.</p> 
+      <p>3. You can describe the objects by their size, color and location.</p> <br>
+      <h2>Problems/To do</h2>
+      <p>1. There is no physics or collision detection, so you can do weird things like place cubes on top of pyramids and two objects can overlap. This is partially because I'm using <a href="http://jdan.github.io/isomer/" target="_blank">Isomer</a> (which is awesome) for the canvas rendering. If I eventually switch over to <a href="http://threejs.org/" target="_blank">Three.js</a> it should be a bit better.</p>
+      <p>2. You cannot rotate objects.</p>
+      <p>3. Need to implement <a href="http://conceptnet5.media.mit.edu/" target="_blank">ConceptNet API</a> for determining if an unknown word is related to some pre-programmed concept.</p>
+      <p>4. The program doesn't understand math, so you can't write <i>remove 3*2 cubes</i>.</p>
+      <p>5. Program doesn't understand what "between" means.</p>
+    </div>
+
+    <script src="js/external/jquery-2.1.4.min.js"></script>
+    <script src="js/external/nlp.min.js"></script>
+    <script src="js/external/isomer.min.js"></script>
+    
+    <script src="js/mapping.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/tokenize.js"></script>
+    <script src="js/semantics.js"></script>
+    <script src="js/action.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
+

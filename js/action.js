@@ -111,8 +111,8 @@ var Action = function(semantics) {
     // e.g. place an object, change something, etc.
     determine: function(parsed) {
 
-      console.log('NEW TAGS', parsed.tags);
-      console.log('MOD SENTENCE', parsed.sentence);
+      //console.log('NEW TAGS', parsed.tags);
+      //console.log('MOD SENTENCE', parsed.sentence);
 
       var s = nlp.pos(parsed.sentence.join(' ')).sentences[0];
       if (s.verbs()[0]!==undefined) { 
@@ -181,10 +181,10 @@ var Action = function(semantics) {
 
         // each pass through sentence
         counter++;
-        console.log('PASS ' + counter);
         formula.push({'OBJECT': o, 'LOCATION': l, 'RELATION': c});
-        console.log(formula);
-        console.log('SEN', parsed.sentence);
+        //console.log('PASS ' + counter);
+        //console.log(formula);
+        //console.log('SEN', parsed.sentence);
 
       }
 

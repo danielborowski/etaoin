@@ -151,7 +151,7 @@ var World = function(el, Mapping) {
           // setup the new object
           newObject = {};
           determineObject(i, newObject);
-          console.log('NEW OBJECT', newObject);
+          //console.log('NEW OBJECT', newObject);
 
           // store object for updating if an 
           // update command was parsed
@@ -295,7 +295,7 @@ var World = function(el, Mapping) {
 
               }
 
-              console.log('UPDATED', updatedObject);
+              //console.log('UPDATED', updatedObject);
 
               // add the updated object into the world
               world.objects.push(updatedObject);
@@ -305,8 +305,8 @@ var World = function(el, Mapping) {
             // update the properties for the one object found
             updateProperties(foundObject);
 
-            console.log('FOUND', foundObject);
-            console.log('FOUND ARR', foundArray);
+            //console.log('FOUND', foundObject);
+            //console.log('FOUND ARR', foundArray);
 
             // if more objects in the world need to be updated
             // e.g. "make all the cubes yellow"
